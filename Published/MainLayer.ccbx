@@ -3,7 +3,7 @@
 <Document
         jsControlled="true"
         jsController="MainLayer"
-        resolution="default1"
+        resolution="default"
         >
 
     <Resolutions>
@@ -28,27 +28,20 @@
         </Animation>
 
     </Animations>
-    <Layer
-            positionX="0" positionY="0.0"
-            sizeType="Percent"
-            width="100" height="100"
-            anchorPointX="0.5" anchorPointY="0.5" ignoreAnchorPoint="true"
-            scaleX="1" scaleY="1"
-            >
 
-        <Sprite positionType="LeftBottom" width="480.0" height="320.0" positionX="730.0" positionY="389.0"
-                anchorPointX="0.5"
-                anchorPointY="0.5" src="res/HelloWorld.png">
+    <Layer
+            positionX="0" positionY="0"
+            width="100" height="100" sizeType="Percent"
+            anchorPointX="0" anchorPointY="0" ignoreAnchorPoint="true"
+            scaleX="1" scaleY="1"
+            touchEnabled="true" positionType="Percent">
+
+        <Sprite positionType="LeftBottom" positionX="0" positionY="0" anchorPointX="0"
+                anchorPointY="0" src="res/bg_main.png" color="#ffff434d">
         </Sprite>
-        <Menu positionType="LeftBottom" width="40" height="40" positionX="680.0" positionY="197.0" anchorPointX="0.5"
-              anchorPointY="0.5" scaleX="2.4" scaleY="1.725">
-            <MenuItem positionType="LeftBottom" width="40" height="40" positionX="73.0" positionY="18.0"
-                      anchorPointX="0.5"
-                      anchorPointY="0.5"
-                      normalImage="res/CloseNormal.png"
-                      selectedImage="res/CloseSelected.png" disabledImage="res/CloseSelected.png"
-                      target="Doc" onClick="onExitClicked"/>
-        </Menu>
+
+        <Sprite positionType="LeftBottom" positionX="226.0" positionY="369.0" anchorPointX="0.5"
+                anchorPointY="0.5" src="res/star_packer.plist/star_01.png" visible="false"/>
     </Layer>
 
 

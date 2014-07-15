@@ -26,8 +26,7 @@ cc.BuilderReader.loadAsScene = function (file, owner, parentSize) {
     return scene;
 };
 
-cc.BuilderReader.loadAsSceneFrom = function (path, ccbName)
-{
+cc.BuilderReader.loadAsSceneFrom = function (path, ccbName) {
     if (path && path.length > 0) {
         cc.BuilderReader.setResourcePath(path + "/");
         return cc.BuilderReader.loadAsScene(path + "/" + ccbName);
@@ -37,8 +36,7 @@ cc.BuilderReader.loadAsSceneFrom = function (path, ccbName)
     }
 }
 
-cc.BuilderReader.loadAsNodeFrom = function (path, ccbName, owner)
-{
+cc.BuilderReader.loadAsNodeFrom = function (path, ccbName, owner) {
     if (path && path.length > 0) {
         cc.BuilderReader.setResourcePath(path + "/");
         return cc.BuilderReader.load(path + "/" + ccbName, owner);
@@ -65,7 +63,9 @@ cc.BuilderReader.runScene = function (module, name) {
 var ccb_resources = [
     {type: 'image', src: "res/HelloWorld.png"},
     {type: 'image', src: "res/CloseNormal.png"},
-    {type: 'image', src: "res/CloseSelected.png"}
+    {type: 'image', src: "res/CloseSelected.png"},
+    {type: 'image', src: "res/star_packer.plist"},
+    {type: 'image', src: "res/bg_main.png"}
 ];
 
 require("MainLayer.js");
@@ -87,8 +87,8 @@ if (sys.platform == 'browser') {
             // director.setDisplayStats(this.config['showFPS']);
             // set FPS. the default value is 1.0/60 if you don't call this
             director.setAnimationInterval(1.0 / this.config['frameRate']);
-            var glView= director.getOpenGLView();
-            glView.setDesignResolutionSize(1280,720,cc.RESOLUTION_POLICY.SHOW_ALL);
+            var glView = director.getOpenGLView();
+            glView.setDesignResolutionSize(720, 1280, cc.RESOLUTION_POLICY.SHOW_ALL);
             cc.Loader.preload(ccb_resources, function () {
                 cc.BuilderReader.runScene("", "MainLayer");
             }, this);

@@ -21,6 +21,15 @@ MainLayer.prototype.onDidLoadFromCCB = function () {
 };
 
 MainLayer.prototype.onEnter = function () {
+    cc.log("onEnter  ----->  ")
+
+    var starSprite = cc.Sprite.createWithSpriteFrameName("star_06.png");
+    starSprite.setAnchorPoint(cc.p(0, 0));
+    starSprite.setPosition(cc.p(500, 500));
+    //starSprite.starData = {name: randomStar, color: colors[random], indexOfColumn: colIndex, indexOfRow: rowIndex};
+    starSprite.setZOrder(120);
+    this.rootNode.addChild(starSprite);
+
 }
 
 MainLayer.prototype.onUpdate = function () {

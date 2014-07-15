@@ -10,14 +10,14 @@
         <key>main</key>
         <string>main.js</string>
         <key>designWidth</key>
-        <string>1280</string>
-        <key>designHeight</key>
         <string>720</string>
+        <key>designHeight</key>
+        <string>1280</string>
         <key>designPolicy</key>
         <string>NO_BORDER</string>
         <key>viewWidth</key>
-        <integer>640</integer>
+        <integer>360</integer>
         <key>viewHeight</key>
-        <integer>320</integer>
+        <integer>640</integer>
     </dict>
 </plist>
