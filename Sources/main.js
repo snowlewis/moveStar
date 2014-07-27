@@ -69,6 +69,7 @@ var ccb_resources = [
 ];
 
 require("MainLayer.js");
+require("snowUtils.js");
 
 if (sys.platform == 'browser') {
 
